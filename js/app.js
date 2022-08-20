@@ -39,9 +39,6 @@ let cargarCabecero = ()=>{
     document.getElementById("porcentaje").innerHTML = formatoPorcentaje(porcentajeEgreso);
     document.getElementById("ingreso").innerHTML =  formatoMoneda(totalIngresos());
     document.getElementById("egreso").innerHTML = formatoMoneda(totalEgresos());
-
-    console.log("si sirve we")
-
 }
 
 const formatoMoneda = (valor) =>{
@@ -51,7 +48,6 @@ const formatoMoneda = (valor) =>{
 
 const formatoPorcentaje = (valor) =>{
     return valor.toLocaleString("es-US", {style: "percent",  minimumFractionDigits: 2})
-
 }
 
 const cargarIngresos = () =>{
@@ -130,7 +126,7 @@ const agregarDato = () =>{
             ingresos.push(new Ingresos(descripcion.value, +valor.value))
             cargarCabecero();
             cargarIngresos();
-            console.log("vamos bien como dice amlo")
+          
 
         }else if(tipo.value === "egreso"){
             let newEgreso = new Egresos(descripcion.value, +valor.value)
